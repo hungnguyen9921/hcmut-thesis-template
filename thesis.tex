@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper,oneside]{book}
+
+\usepackage{hcmut-thesis}
+
+% Sub-preambles
+% https://tex.stackexchange.com/a/395416
+
+% Remember to change 'draft' to 'final' on submission
+% \usepackage[draft,pageno]{listofsymbols}
+% \usepackage{algorithm2e}
+
+% For demonstration purposes, remove in production
+\usepackage{blindtext}
+
+% Configurations
+\oreporttype{Report type h}
+\title{Report title h}
+\odefcouncil{Council h}
+\osupervisor{Prof.\ h}
+\oreviewer{Prof.\ h}
+\ostuname{STUDENT h (xxxxxxx)}
+\thesislayout%
+
+% Custom commands
+\newcommand*\mean[1]{\bar{#1}}
+
+\begin{document}
+
+\coverpage%
+
+\frontmatter%
+
+\include{chapters/front/declaration.tex}
+\include{chapters/front/acknowledge.tex}
+\include{chapters/front/abstract.tex}
+
+\tableofcontents
+
+\clearpage
+
+% \phantomsection\addcontentsline{toc}{chapter}{List of Symbols}
+% \listofsymbols%
+
+% \clearpage
+
+\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+\clearpage
+
+\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+% \clearpage
+
+% \phantomsection\addcontentsline{toc}{chapter}{List of Algorithms}
+% \listofalgorithms%
+
+\mainmatter%
+
+\include{chapters/main/introduction.tex}
+
+% For demonstration purposes, remove in production
+\Blinddocument%
+
+\backmatter%
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\nocite{*}
+
+\end{document}
